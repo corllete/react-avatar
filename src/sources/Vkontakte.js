@@ -31,6 +31,11 @@ export default class GoogleSource {
     const url = `https://api.vk.com/method/users.get?user_id=${vkontakteId}&v=5.8&fields=${size}`;
 
     fetchJSONP(url, (data) => {
+      // api returns OK code but an error
+      if (data.error) {
+        setState(null);
+        return;
+      }
       const src = data.response[0][size];
       setState({
         src: src

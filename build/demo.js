@@ -81,19 +81,6 @@ var Demo = function (_React$Component) {
           _react2.default.createElement(
             'h2',
             null,
-            'Invalid gravatar'
-          ),
-          _react2.default.createElement(_index2.default, { email: 'bla', name: 'Jim Jones', size: 80 }),
-          _react2.default.createElement(_index2.default, { email: 'foo', name: 'Jamie Jones', size: 80 }),
-          _react2.default.createElement(_index2.default, { name: 'Jessica Jones', size: 80 }),
-          _react2.default.createElement(_index2.default, { name: 'Jeronimo Jones', size: 80 })
-        ),
-        _react2.default.createElement(
-          'section',
-          null,
-          _react2.default.createElement(
-            'h2',
-            null,
             'Google+'
           ),
           _react2.default.createElement(_index2.default, { googleId: '116933859726289749306', size: 40 }),
@@ -133,12 +120,12 @@ var Demo = function (_React$Component) {
           _react2.default.createElement(
             'h2',
             null,
-            'Vkontakte'
+            'Skype'
           ),
-          _react2.default.createElement(_index2.default, { vkontakteId: '1', size: 40 }),
-          _react2.default.createElement(_index2.default, { vkontakteId: '1', size: 100, round: true }),
-          _react2.default.createElement(_index2.default, { vkontakteId: '1', size: 150 }),
-          _react2.default.createElement(_index2.default, { vkontakteId: '1', size: 200 })
+          _react2.default.createElement(_index2.default, { skypeId: 'sitebase', size: 40 }),
+          _react2.default.createElement(_index2.default, { skypeId: 'sitebase', size: 100, round: true }),
+          _react2.default.createElement(_index2.default, { skypeId: 'sitebase', size: 150 }),
+          _react2.default.createElement(_index2.default, { skypeId: 'sitebase', size: 200 })
         ),
         _react2.default.createElement(
           'section',
@@ -146,12 +133,90 @@ var Demo = function (_React$Component) {
           _react2.default.createElement(
             'h2',
             null,
-            'Skype'
+            'Invalid Gravatar'
           ),
-          _react2.default.createElement(_index2.default, { skypeId: 'sitebase', size: 40 }),
-          _react2.default.createElement(_index2.default, { skypeId: 'sitebase', size: 100, round: true }),
-          _react2.default.createElement(_index2.default, { skypeId: 'sitebase', size: 150 }),
-          _react2.default.createElement(_index2.default, { skypeId: 'sitebase', size: 200 })
+          _react2.default.createElement(_index2.default, { email: 'bla', name: 'Jim Jones', size: 80 }),
+          _react2.default.createElement(_index2.default, { email: 'foo', name: 'Jessica Jones', size: 80 }),
+          _react2.default.createElement(_index2.default, { name: 'Jessica Jones', size: 80 }),
+          _react2.default.createElement(_index2.default, { name: 'Jeronimo Jones', size: 80 }),
+          _react2.default.createElement(
+            'h2',
+            null,
+            'Invalid Google+'
+          ),
+          _react2.default.createElement(_index2.default, {
+            googleId: 'invalid',
+            name: 'Jim Jones',
+            size: 80 }),
+          _react2.default.createElement(_index2.default, {
+            googleId: 'invalid2',
+            name: 'Jessica Jones',
+            size: 80 }),
+          _react2.default.createElement(
+            'h2',
+            null,
+            'Invalid Facebook'
+          ),
+          _react2.default.createElement(_index2.default, {
+            facebookId: 'invalid',
+            name: 'Jim Jones',
+            size: 80 }),
+          _react2.default.createElement(_index2.default, {
+            facebookId: 'invalid',
+            name: 'Jessica Jones',
+            size: 80 }),
+          _react2.default.createElement(
+            'h2',
+            null,
+            'Invalid Twitter'
+          ),
+          _react2.default.createElement(_index2.default, {
+            twitterHandle: 'invalid',
+            name: 'Jim Jones',
+            size: 80 }),
+          _react2.default.createElement(_index2.default, {
+            twitterHandle: 'invalid',
+            name: 'Jessica Jones',
+            size: 80 }),
+          _react2.default.createElement(
+            'h2',
+            null,
+            'Invalid Skype'
+          ),
+          _react2.default.createElement(_index2.default, {
+            skypeId: 'invalid',
+            name: 'Jim Jones',
+            size: 80 }),
+          _react2.default.createElement(_index2.default, {
+            skypeId: 'invalid',
+            name: 'Jessica Jones',
+            size: 80 }),
+          _react2.default.createElement(
+            'h2',
+            null,
+            'Invalid Vkontakte'
+          ),
+          _react2.default.createElement(_index2.default, {
+            vkontakteId: '1',
+            name: 'Jim Jones',
+            size: 80 }),
+          _react2.default.createElement(_index2.default, {
+            vkontakteId: '1',
+            name: 'Jessica Jones',
+            size: 80 }),
+          _react2.default.createElement(
+            'h2',
+            null,
+            'Invalid Source'
+          ),
+          _react2.default.createElement(_index2.default, {
+            src: 'invalidSource',
+            name: 'Jim Jones',
+            size: 80 }),
+          _react2.default.createElement(_index2.default, {
+            src: 'invalidSource2',
+            name: 'Jessica Jones',
+            size: 80 })
         ),
         _react2.default.createElement(
           'section',
@@ -226,8 +291,18 @@ var Demo = function (_React$Component) {
           _react2.default.createElement(
             'div',
             null,
-            _react2.default.createElement(_index2.default, { name: this.state.name, maxInitials: 2, skypeId: this.state.skypeId, size: 40, textSizeRatio: 2 }),
-            _react2.default.createElement(_index2.default, { name: this.state.name, maxInitials: 1, size: 100, round: true, textSizeRatio: 2 }),
+            _react2.default.createElement(_index2.default, {
+              name: this.state.name,
+              maxInitials: 2,
+              skypeId: this.state.skypeId,
+              size: 40,
+              textSizeRatio: 2 }),
+            _react2.default.createElement(_index2.default, {
+              name: this.state.name,
+              maxInitials: 1,
+              size: 100,
+              round: true,
+              textSizeRatio: 2 }),
             _react2.default.createElement(_index2.default, { name: this.state.name, size: 150, textSizeRatio: 2 }),
             _react2.default.createElement(_index2.default, { name: this.state.name, size: 200, textSizeRatio: 2 })
           )
@@ -302,13 +377,13 @@ var Demo = function (_React$Component) {
             null,
             'Vertical Alignment'
           ),
-          _react2.default.createElement(_index2.default, { name: 'Wim Mostmans', size: 50 }),
+          _react2.default.createElement(_index2.default, { valign: 'middle', name: 'Wim Mostmans', size: 50 }),
           'Wim Mostmans',
-          _react2.default.createElement(_index2.default, { name: 'Wim Mostmans', size: 50, round: true }),
+          _react2.default.createElement(_index2.default, { valign: 'middle', name: 'Wim Mostmans', size: 50, round: true }),
           'Wim Mostmans',
-          _react2.default.createElement(_index2.default, { md5Email: '8c5d4c4b9ef6c68c4ff91c319d4c56be', size: 50, round: true }),
+          _react2.default.createElement(_index2.default, { valign: 'middle', md5Email: '8c5d4c4b9ef6c68c4ff91c319d4c56be', size: 50, round: true }),
           'Wim Mostmans',
-          _react2.default.createElement(_index2.default, { md5Email: '8c5d4c4b9ef6c68c4ff91c319d4c56be', size: 150 }),
+          _react2.default.createElement(_index2.default, { valign: 'middle', md5Email: '8c5d4c4b9ef6c68c4ff91c319d4c56be', size: 150 }),
           'Wim Mostmans'
         )
       );
@@ -320,6 +395,7 @@ var Demo = function (_React$Component) {
 
 exports.default = Demo;
 
+Demo.displayName = 'Demo';
 
 var mountNode = document.getElementById('container');
 _reactDom2.default.render(_react2.default.createElement(Demo, null), mountNode);
@@ -328,7 +404,7 @@ module.exports = exports['default'];
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
@@ -392,225 +468,247 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 var SOURCES = [_Facebook2.default, _Google2.default, _Twitter2.default, _Vkontakte2.default, _Skype2.default, _Gravatar2.default, _Src2.default, _Value2.default, _Icon2.default];
 
 var Avatar = function (_PureComponent) {
-    _inherits(Avatar, _PureComponent);
+  _inherits(Avatar, _PureComponent);
 
-    function Avatar(props) {
-        _classCallCheck(this, Avatar);
+  function Avatar(props) {
+    _classCallCheck(this, Avatar);
 
-        var _this = _possibleConstructorReturn(this, (Avatar.__proto__ || Object.getPrototypeOf(Avatar)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (Avatar.__proto__ || Object.getPrototypeOf(Avatar)).call(this, props));
 
-        _this.tryNextsource = function (Source, next) {
+    _this.tryNextsource = function (Source, next) {
+      var instance = new Source(_this.props);
 
-            var instance = new Source(_this.props);
+      if (!instance.isCompatible(_this.props)) return next();
 
-            if (!instance.isCompatible(_this.props)) return next();
+      instance.get(function (state) {
+        _this.setState(function () {
+          return state && !(0, _utils.hasSourceFailedBefore)(state.src) ? state : {};
+        }, function () {
+          var failedBefore = !!state && state.hasOwnProperty('src') && (0, _utils.hasSourceFailedBefore)((state || {}).src);
 
-            instance.get(function (state) {
-                var failedBefore = state && state.hasOwnProperty('src') && (0, _utils.hasSourceFailedBefore)(state.src);
+          if (failedBefore || !state) {
+            next();
+          }
+        });
+      });
+    };
 
-                if (!failedBefore && state) {
-                    // console.log(state);
-                    _this.setState(state);
-                } else {
-                    next();
-                }
-            });
-        };
+    _this.fetch = function (event) {
+      // If fetch was triggered by img onError
+      // then set state src back to null so render will
+      // automatically switch a text avatar if there is no
+      // other social ID available to try
+      if (event && event.type === 'error') {
+        (0, _utils.cacheFailingSource)(_this.state.src);
+        _this.setState(function () {
+          return { src: null };
+        });
+        return;
+      }
 
-        _this.fetch = function (event) {
-            // If fetch was triggered by img onError
-            // then set state src back to null so render will
-            // automatically switch a text avatar if there is no
-            // other social ID available to try
-            if (event && event.type === 'error') {
-                (0, _utils.cacheFailingSource)(_this.state.src);
-                _this.setState({ src: null });
+      // console.log('## fetch');
+
+      var id = _this._fetchId = _this._fetchId ? _this._fetchId + 1 : 1;
+
+      var tryFetch = function tryFetch() {
+        if (SOURCES.length === _this.state._internal.sourcePointer) return;
+
+        var source = SOURCES[_this.state._internal.sourcePointer];
+
+        var internal = _extends({}, _this.state._internal);
+        internal.sourcePointer++;
+
+        // console.log('## try fetch', id, this._fetchId, internal.sourcePointer - 1);
+        _this.setState(function () {
+          return {
+            _internal: internal
+          };
+        }, function () {
+          _this.tryNextsource(source, function () {
+            // console.log('-- next', id, this._fetchId);
+            if (id === _this._fetchId) {
+              tryFetch();
             }
+          });
+        });
+      };
 
-            // console.log('## fetch');
+      tryFetch();
+    };
 
-            var id = _this._fetchId = _this._fetchId ? _this._fetchId + 1 : 1;
+    _this.state = {
+      _internal: {
+        sourcePointer: 0
+      },
+      src: props.src,
+      value: null,
+      color: props.color
+    };
+    return _this;
+  }
 
-            var tryFetch = function tryFetch() {
-                if (SOURCES.length === _this.state._internal.sourcePointer) return;
-
-                var source = SOURCES[_this.state._internal.sourcePointer];
-
-                var internal = _this.state._internal;
-                internal.sourcePointer++;
-
-                // console.log('## try fetch', id, this._fetchId, internal.sourcePointer-1);
-                _this.setState({
-                    _internal: internal
-                }, function () {
-                    _this.tryNextsource(source, function () {
-                        // console.log('-- next', id, this._fetchId);
-                        if (id === _this._fetchId) {
-                            tryFetch();
-                        }
-                    });
-                });
-            };
-
-            tryFetch();
-        };
-
-        _this.state = {
-            _internal: {
-                sourcePointer: 0
-            },
-            src: props.src,
-            value: null,
-            color: props.color
-        };
-        return _this;
+  _createClass(Avatar, [{
+    key: 'componentWillMount',
+    value: function componentWillMount() {
+      this.fetch();
     }
+  }, {
+    key: 'componentWillReceiveProps',
+    value: function componentWillReceiveProps(newProps) {
+      var nextState = {};
+      if (newProps.src !== this.props.src) nextState.src = newProps.src;
 
-    _createClass(Avatar, [{
-        key: 'componentWillMount',
-        value: function componentWillMount() {
-            this.fetch();
-        }
-    }, {
-        key: 'componentWillReceiveProps',
-        value: function componentWillReceiveProps(newProps) {
-            var nextState = {};
-            if (newProps.src !== this.props.src) nextState.src = newProps.src;
+      if (newProps.name !== this.props.name) nextState.name = newProps.name;
 
-            if (newProps.name !== this.props.name) nextState.name = newProps.name;
+      if (newProps.maxInitials !== this.props.maxInitials) nextState.maxInitials = newProps.maxInitials;
 
-            if (newProps.maxInitials !== this.props.maxInitials) nextState.maxInitials = newProps.maxInitials;
+      if (newProps.value !== this.props.value) nextState.value = newProps.value;
 
-            if (newProps.value !== this.props.value) nextState.value = newProps.value;
+      if (newProps.email !== this.props.email) nextState.email = newProps.email;
 
-            if (newProps.email !== this.props.email) nextState.email = newProps.email;
+      if (newProps.md5Email !== this.props.md5Email) nextState.md5Email = newProps.md5Email;
 
-            if (newProps.md5Email !== this.props.md5Email) nextState.md5Email = newProps.md5Email;
+      if (newProps.facebookId !== this.props.facebookId) nextState.facebookId = newProps.facebookId;
 
-            if (newProps.facebookId !== this.props.facebookId) nextState.facebookId = newProps.facebookId;
+      if (newProps.googleId !== this.props.googleId) nextState.googleId = newProps.googleId;
 
-            if (newProps.googleId !== this.props.googleId) nextState.googleId = newProps.googleId;
+      if (newProps.twitterHandle !== this.props.twitterHandle) nextState.twitterHandle = newProps.twitterHandle;
 
-            if (newProps.twitterHandle !== this.props.twitterHandle) nextState.twitterHandle = newProps.twitterHandle;
+      if (newProps.vkontakteId !== this.props.vkontakteId) nextState.vkontakteId = newProps.vkontakteId;
 
-            if (newProps.vkontakteId !== this.props.vkontakteId) nextState.vkontakteId = newProps.vkontakteId;
+      if (newProps.skypeId !== this.props.skypeId) nextState.skypeId = newProps.skypeId;
 
-            if (newProps.skypeId !== this.props.skypeId) nextState.skypeId = newProps.skypeId;
+      if (Object.keys(nextState) !== 0) {
+        nextState._internal = this.state._internal;
+        nextState._internal.sourcePointer = 0;
+        this.setState(nextState, this.fetch);
+      }
+    }
+  }, {
+    key: '_renderAsImage',
+    value: function _renderAsImage() {
+      var size = this.props.size;
+      var unit = this.props.unit;
+      var round = this.props.round;
+      var borderRadius = this.props.borderRadius;
+      var alt = this.props.name || this.props.value;
+      var imageStyle = this.props.unstyled ? null : {
+        maxWidth: '100%',
+        width: size + unit,
+        height: size + unit,
+        borderRadius: round ? borderRadius : 0
+      };
+      return _react2.default.createElement('img', { width: size + unit,
+        height: size + unit,
+        style: imageStyle,
+        src: this.state.src,
+        alt: alt,
+        onError: this.fetch });
+    }
+  }, {
+    key: '_renderAsText',
+    value: function _renderAsText() {
+      var size = this.props.size;
+      var unit = this.props.unit;
+      var textSizeRatio = this.props.textSizeRatio;
+      var fontFamily = this.props.fontFamily;
+      var round = this.props.round;
+      var borderRadius = this.props.borderRadius;
+      var initialsStyle = this.props.unstyled ? null : {
+        width: size + unit,
+        height: size + unit,
+        font: Math.floor(size * 10 / textSizeRatio) / 10 + unit + ' ' + fontFamily,
+        lineHeight: size + unit,
+        fontSize: Math.floor(size / textSizeRatio) + unit,
+        fontFamily: fontFamily,
+        textAlign: 'center',
+        textTransform: 'uppercase',
+        color: this.props.fgColor,
+        background: this.state.color,
+        borderRadius: round ? borderRadius : 0
+      };
+      return _react2.default.createElement(
+        'div',
+        { style: initialsStyle },
+        this.state.value
+      );
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var size = this.props.size;
+      var unit = this.props.unit;
+      var hostStyle = this.props.unstyled ? null : _extends({
+        display: 'inline-block',
+        width: size + unit,
+        height: size + unit,
+        borderRadius: this.props.round ? this.props.borderRadius : 0,
+        verticalAlign: this.props.valign
+      }, this.props.style);
 
-            if (Object.keys(nextState) !== 0) {
-                nextState._internal = this.state._internal;
-                nextState._internal.sourcePointer = 0;
-                this.setState(nextState, this.fetch);
-            }
-        }
-    }, {
-        key: '_renderAsImage',
-        value: function _renderAsImage() {
-            var size = this.props.size;
-            var round = this.props.round;
-            var alt = this.props.name || this.props.value;
-            var imageStyle = this.props.unstyled ? null : {
-                maxWidth: '100%',
-                width: size,
-                height: size,
-                borderRadius: round ? 500 : 0
-            };
-            return _react2.default.createElement('img', { width: this.props.size,
-                height: this.props.size,
-                style: imageStyle,
-                src: this.state.src,
-                alt: alt,
-                onError: this.fetch });
-        }
-    }, {
-        key: '_renderAsText',
-        value: function _renderAsText() {
-            var size = this.props.size;
-            var textSizeRatio = this.props.textSizeRatio;
-            var round = this.props.round;
-            var initialsStyle = this.props.unstyled ? null : {
-                width: size,
-                height: size,
-                font: Math.floor(size / textSizeRatio) + 'px Helvetica, Arial, sans-serif',
-                lineHeight: size + 'px', // yes, px suffix is needed on lineHeight
-                textAlign: 'center',
-                textTransform: 'uppercase',
-                color: this.props.fgColor,
-                background: this.state.color,
-                borderRadius: round ? '100%' : 0
-            };
-            return _react2.default.createElement(
-                'div',
-                { style: initialsStyle },
-                this.state.value
-            );
-        }
-    }, {
-        key: 'render',
-        value: function render() {
-            var size = this.props.size;
-            var hostStyle = this.props.unstyled ? null : _extends({
-                display: 'inline-block',
-                verticalAlign: 'middle',
-                width: size,
-                height: size,
-                borderRadius: this.props.round ? 500 : 0
-            }, this.props.style);
-            return _react2.default.createElement(
-                'div',
-                { className: this.props.className, onClick: this.props.onClick,
-                    style: hostStyle },
-                this.state.src ? this._renderAsImage() : this._renderAsText()
-            );
-        }
-    }]);
+      return _react2.default.createElement(
+        'div',
+        { className: this.props.className, onClick: this.props.onClick,
+          style: hostStyle },
+        this.state.src ? this._renderAsImage() : this._renderAsText()
+      );
+    }
+  }]);
 
-    return Avatar;
+  return Avatar;
 }(_react.PureComponent);
 
 Avatar.displayName = 'Avatar';
 Avatar.propTypes = {
-    className: _propTypes2.default.string,
-    fgColor: _propTypes2.default.string,
-    color: _propTypes2.default.string,
-    colors: _propTypes2.default.array,
-    name: _propTypes2.default.string,
-    maxInitials: _propTypes2.default.number,
-    value: _propTypes2.default.string,
-    email: _propTypes2.default.string,
-    md5Email: _propTypes2.default.string,
-    src: _propTypes2.default.string,
-    facebookId: _propTypes2.default.string,
-    googleId: _propTypes2.default.string,
-    twitterHandle: _propTypes2.default.string,
-    vkontakteId: _propTypes2.default.string,
-    skypeId: _propTypes2.default.string,
-    round: _propTypes2.default.bool,
-    style: _propTypes2.default.object,
-    size: _propTypes2.default.number,
-    textSizeRatio: _propTypes2.default.number,
-    unstyled: _propTypes2.default.bool,
-    onClick: _propTypes2.default.func
+  className: _propTypes2.default.string,
+  fgColor: _propTypes2.default.string,
+  color: _propTypes2.default.string,
+  colors: _propTypes2.default.array,
+  name: _propTypes2.default.string,
+  maxInitials: _propTypes2.default.number,
+  value: _propTypes2.default.string,
+  email: _propTypes2.default.string,
+  md5Email: _propTypes2.default.string,
+  src: _propTypes2.default.string,
+  facebookId: _propTypes2.default.string,
+  googleId: _propTypes2.default.string,
+  twitterHandle: _propTypes2.default.string,
+  vkontakteId: _propTypes2.default.string,
+  skypeId: _propTypes2.default.string,
+  round: _propTypes2.default.bool,
+  borderRadius: _propTypes2.default.string,
+  style: _propTypes2.default.object,
+  fontFamily: _propTypes2.default.string,
+  size: _propTypes2.default.number,
+  unit: _propTypes2.default.string,
+  textSizeRatio: _propTypes2.default.number,
+  valign: _propTypes2.default.string,
+  unstyled: _propTypes2.default.bool,
+  onClick: _propTypes2.default.func
 };
 Avatar.defaultProps = {
-    className: 'sb-avatar',
-    fgColor: '#FFF',
-    color: null,
-    name: null,
-    maxInitials: null,
-    value: null,
-    email: null,
-    md5Email: null,
-    facebookId: null,
-    googleId: null,
-    twitterHandle: null,
-    vkontakteId: null,
-    skypeId: null,
-    round: false,
-    size: 100,
-    style: null,
-    textSizeRatio: 3,
-    unstyled: false
+  className: 'sb-avatar',
+  fgColor: '#FFF',
+  color: null,
+  name: null,
+  maxInitials: null,
+  value: null,
+  email: null,
+  md5Email: null,
+  facebookId: null,
+  googleId: null,
+  twitterHandle: null,
+  vkontakteId: null,
+  skypeId: null,
+  round: false,
+  borderRadius: '100%',
+  size: 100,
+  unit: 'px',
+  style: null,
+  fontFamily: 'Helvetica, Arial, sans-serif',
+  textSizeRatio: 3,
+  valign: 'baseline',
+  unstyled: false
 };
 exports.default = Avatar;
 module.exports = exports['default'];
@@ -618,33 +716,33 @@ module.exports = exports['default'];
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var FacebookSource = function FacebookSource(props) {
-    var _this = this;
+  var _this = this;
 
-    _classCallCheck(this, FacebookSource);
+  _classCallCheck(this, FacebookSource);
 
-    this.props = null;
+  this.props = null;
 
-    this.isCompatible = function () {
-        return !!_this.props.facebookId;
-    };
+  this.isCompatible = function () {
+    return !!_this.props.facebookId;
+  };
 
-    this.get = function (setState) {
-        var _props = _this.props,
-            size = _props.size,
-            facebookId = _props.facebookId;
+  this.get = function (setState) {
+    var _props = _this.props,
+        size = _props.size,
+        facebookId = _props.facebookId;
 
-        var url = 'https://graph.facebook.com/' + (facebookId + '/picture?width=' + size + '&height=' + size);
+    var url = 'https://graph.facebook.com/' + (facebookId + '/picture?width=' + size + '&height=' + size);
 
-        setState({ src: url });
-    };
+    setState({ src: url });
+  };
 
-    this.props = props;
+  this.props = props;
 };
 
 exports.default = FacebookSource;
@@ -653,7 +751,7 @@ module.exports = exports['default'];
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _utils = require('../utils');
@@ -661,42 +759,42 @@ var _utils = require('../utils');
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var GoogleSource = function GoogleSource(props) {
-    var _this = this;
+  var _this = this;
 
-    _classCallCheck(this, GoogleSource);
+  _classCallCheck(this, GoogleSource);
 
-    this.props = null;
+  this.props = null;
 
-    this.isCompatible = function () {
-        return !!_this.props.googleId;
-    };
+  this.isCompatible = function () {
+    return !!_this.props.googleId;
+  };
 
-    this.get = function (setState) {
-        var _props = _this.props,
-            size = _props.size,
-            googleId = _props.googleId;
+  this.get = function (setState) {
+    var _props = _this.props,
+        size = _props.size,
+        googleId = _props.googleId;
 
-        var url = 'https://picasaweb.google.com/data/entry/api/user/' + googleId + '?alt=json';
+    var url = 'https://picasaweb.google.com/data/entry/api/user/' + googleId + '?alt=json';
 
-        if ((0, _utils.hasSourceFailedBefore)(url)) {
-            setState(null);
-            return;
-        }
+    if ((0, _utils.hasSourceFailedBefore)(url)) {
+      setState(null);
+      return;
+    }
 
-        (0, _utils.fetch)(url, function (data) {
-            var src = data.entry.gphoto$thumbnail.$t;
-            var srcWithCorrectSize = src.replace('s64', 's' + size);
-            setState({
-                src: srcWithCorrectSize
-            });
-        }, function () {
-            // on error
-            (0, _utils.cacheFailingSource)(url);
-            setState(null);
-        });
-    };
+    (0, _utils.fetch)(url, function (data) {
+      var src = data.entry.gphoto$thumbnail.$t;
+      var srcWithCorrectSize = src.replace('s64', 's' + size);
+      setState({
+        src: srcWithCorrectSize
+      });
+    }, function () {
+      // on error
+      (0, _utils.cacheFailingSource)(url);
+      setState(null);
+    });
+  };
 
-    this.props = props;
+  this.props = props;
 };
 
 exports.default = GoogleSource;
@@ -705,7 +803,7 @@ module.exports = exports['default'];
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _isRetina = require('is-retina');
@@ -723,31 +821,31 @@ function _classCallCheck(instance, Constructor) { if (!(instance instanceof Cons
 var IS_RETINA = (0, _isRetina2.default)();
 
 var GravatarSource = function GravatarSource(props) {
-    _classCallCheck(this, GravatarSource);
+  _classCallCheck(this, GravatarSource);
 
-    _initialiseProps.call(this);
+  _initialiseProps.call(this);
 
-    this.props = props;
+  this.props = props;
 };
 
 var _initialiseProps = function _initialiseProps() {
-    var _this = this;
+  var _this = this;
 
-    this.props = null;
+  this.props = null;
 
-    this.isCompatible = function () {
-        return !!_this.props.email || !!_this.props.md5Email;
-    };
+  this.isCompatible = function () {
+    return !!_this.props.email || !!_this.props.md5Email;
+  };
 
-    this.get = function (setState) {
-        var props = _this.props;
+  this.get = function (setState) {
+    var props = _this.props;
 
-        var email = props.md5Email || (0, _md2.default)(props.email);
-        var size = IS_RETINA ? props.size * 2 : props.size;
-        var url = 'https://secure.gravatar.com/avatar/' + email + '?s=' + size + '&d=404';
+    var email = props.md5Email || (0, _md2.default)(props.email);
+    var size = IS_RETINA ? props.size * 2 : props.size;
+    var url = 'https://secure.gravatar.com/avatar/' + email + '?s=' + size + '&d=404';
 
-        setState({ src: url });
-    };
+    setState({ src: url });
+  };
 };
 
 exports.default = GravatarSource;
@@ -756,7 +854,7 @@ module.exports = exports['default'];
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _utils = require('../utils');
@@ -764,98 +862,98 @@ var _utils = require('../utils');
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var IconSource = function IconSource(props) {
-    var _this = this;
+  var _this = this;
 
-    _classCallCheck(this, IconSource);
+  _classCallCheck(this, IconSource);
 
-    this.props = null;
-    this.icon = '✷';
+  this.props = null;
+  this.icon = '✷';
 
-    this.isCompatible = function () {
-        return true;
-    };
+  this.isCompatible = function () {
+    return true;
+  };
 
-    this.get = function (setState) {
-        setState({
-            value: _this.icon,
-            color: (0, _utils.getRandomColor)(_this.icon, _this.props.colors)
-        });
-    };
+  this.get = function (setState) {
+    setState({
+      value: _this.icon,
+      color: (0, _utils.getRandomColor)(_this.icon, _this.props.colors)
+    });
+  };
 
-    this.props = props;
+  this.props = props;
 };
 
 exports.default = IconSource;
 module.exports = exports['default'];
 },{"../utils":12}],7:[function(require,module,exports){
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var SkypeSource = function SkypeSource(props) {
-    var _this = this;
+  var _this = this;
 
-    _classCallCheck(this, SkypeSource);
+  _classCallCheck(this, SkypeSource);
 
-    this.props = null;
+  this.props = null;
 
-    this.isCompatible = function () {
-        return !!_this.props.skypeId;
-    };
+  this.isCompatible = function () {
+    return !!_this.props.skypeId;
+  };
 
-    this.get = function (setState) {
-        var skypeId = _this.props.skypeId;
+  this.get = function (setState) {
+    var skypeId = _this.props.skypeId;
 
-        var url = 'https://api.skype.com/users/' + skypeId + '/profile/avatar';
+    var url = "https://api.skype.com/users/" + skypeId + "/profile/avatar";
 
-        setState({ src: url });
-    };
+    setState({ src: url });
+  };
 
-    this.props = props;
+  this.props = props;
 };
 
 exports.default = SkypeSource;
-module.exports = exports['default'];
+module.exports = exports["default"];
 },{}],8:[function(require,module,exports){
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var SrcSource = function SrcSource(props) {
-    var _this = this;
+  var _this = this;
 
-    _classCallCheck(this, SrcSource);
+  _classCallCheck(this, SrcSource);
 
-    this.props = null;
+  this.props = null;
 
-    this.isCompatible = function () {
-        return !!_this.props.src;
-    };
+  this.isCompatible = function () {
+    return !!_this.props.src;
+  };
 
-    this.get = function (setState) {
-        setState({
-            src: _this.props.src
-        });
-    };
+  this.get = function (setState) {
+    setState({
+      src: _this.props.src
+    });
+  };
 
-    this.props = props;
+  this.props = props;
 };
 
 exports.default = SrcSource;
-module.exports = exports['default'];
+module.exports = exports["default"];
 },{}],9:[function(require,module,exports){
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -863,47 +961,47 @@ var _createClass = function () { function defineProperties(target, props) { for 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var TwitterSource = function () {
-    function TwitterSource(props) {
-        var _this = this;
+  function TwitterSource(props) {
+    var _this = this;
 
-        _classCallCheck(this, TwitterSource);
+    _classCallCheck(this, TwitterSource);
 
-        this.props = null;
+    this.props = null;
 
-        this.isCompatible = function () {
-            return !!_this.props.twitterHandle;
-        };
+    this.isCompatible = function () {
+      return !!_this.props.twitterHandle;
+    };
 
-        this.get = function (setState) {
-            var twitterHandle = _this.props.twitterHandle;
+    this.get = function (setState) {
+      var twitterHandle = _this.props.twitterHandle;
 
-            var size = _this.getImageSize();
+      var size = _this.getImageSize();
 
-            var url = 'https://twitter.com/' + twitterHandle + '/profile_image?size=' + size;
+      var url = 'https://twitter.com/' + twitterHandle + '/profile_image?size=' + size;
 
-            setState({ src: url });
-        };
+      setState({ src: url });
+    };
 
-        this.props = props;
+    this.props = props;
+  }
+
+  _createClass(TwitterSource, [{
+    key: 'getImageSize',
+    value: function getImageSize() {
+      var size = this.props.size;
+
+
+      if (size <= 24) return 'mini';
+
+      if (size <= 48) return 'normal';
+
+      if (size <= 73) return 'bigger';
+
+      return 'original';
     }
+  }]);
 
-    _createClass(TwitterSource, [{
-        key: 'getImageSize',
-        value: function getImageSize() {
-            var size = this.props.size;
-
-
-            if (size <= 24) return 'mini';
-
-            if (size <= 48) return 'normal';
-
-            if (size <= 73) return 'bigger';
-
-            return 'original';
-        }
-    }]);
-
-    return TwitterSource;
+  return TwitterSource;
 }();
 
 exports.default = TwitterSource;
@@ -912,7 +1010,7 @@ module.exports = exports['default'];
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -922,65 +1020,66 @@ var _utils = require('../utils');
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var ValueSource = function () {
-    function ValueSource(props) {
-        var _this = this;
+  function ValueSource(props) {
+    var _this = this;
 
-        _classCallCheck(this, ValueSource);
+    _classCallCheck(this, ValueSource);
 
-        this.props = null;
+    this.props = null;
 
-        this.isCompatible = function () {
-            return !!_this.props.name || !!_this.props.value;
-        };
+    this.isCompatible = function () {
+      return !!_this.props.name || !!_this.props.value;
+    };
 
-        this.get = function (setState) {
-            var value = _this.getValue();
-            var state = value ? {
-                value: value,
-                color: _this.getColor()
-            } : null;
-            setState(state);
-        };
+    this.get = function (setState) {
+      var value = _this.getValue();
+      var state = value ? {
+        value: value,
+        color: _this.getColor()
+      } : null;
 
-        this.props = props;
+      setState(state);
+    };
+
+    this.props = props;
+  }
+
+  _createClass(ValueSource, [{
+    key: 'getInitials',
+    value: function getInitials() {
+      var name = this.props.name;
+      var maxInitials = this.props.maxInitials;
+      var parts = name.split(' ');
+      var initials = '';
+      for (var i = 0; i < parts.length; i++) {
+        initials += parts[i].substr(0, 1).toUpperCase();
+      }
+      return maxInitials ? initials.slice(0, maxInitials) : initials;
     }
+  }, {
+    key: 'getValue',
+    value: function getValue() {
+      if (this.props.name) return this.getInitials();
 
-    _createClass(ValueSource, [{
-        key: 'getInitials',
-        value: function getInitials() {
-            var name = this.props.name;
-            var maxInitials = this.props.maxInitials;
-            var parts = name.split(' ');
-            var initials = '';
-            for (var i = 0; i < parts.length; i++) {
-                initials += parts[i].substr(0, 1).toUpperCase();
-            }
-            return maxInitials ? initials.slice(0, maxInitials) : initials;
-        }
-    }, {
-        key: 'getValue',
-        value: function getValue() {
-            if (this.props.name) return this.getInitials();
+      if (this.props.value) return this.props.value;
 
-            if (this.props.value) return this.props.value;
+      return null;
+    }
+  }, {
+    key: 'getColor',
+    value: function getColor() {
+      var _props = this.props,
+          color = _props.color,
+          colors = _props.colors,
+          name = _props.name,
+          email = _props.email;
 
-            return null;
-        }
-    }, {
-        key: 'getColor',
-        value: function getColor() {
-            var _props = this.props,
-                color = _props.color,
-                colors = _props.colors,
-                name = _props.name,
-                email = _props.email;
+      var colorValue = email || name;
+      return color || (0, _utils.getRandomColor)(colorValue, colors);
+    }
+  }]);
 
-            var colorValue = email || name;
-            return color || (0, _utils.getRandomColor)(colorValue, colors);
-        }
-    }]);
-
-    return ValueSource;
+  return ValueSource;
 }();
 
 exports.default = ValueSource;
@@ -989,7 +1088,7 @@ module.exports = exports['default'];
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
@@ -999,54 +1098,59 @@ var _utils = require('../utils');
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
 var GoogleSource = function () {
-    function GoogleSource(props) {
-        var _this = this;
+  function GoogleSource(props) {
+    var _this = this;
 
-        _classCallCheck(this, GoogleSource);
+    _classCallCheck(this, GoogleSource);
 
-        this.props = null;
+    this.props = null;
 
-        this.isCompatible = function () {
-            return !!_this.props.vkontakteId;
-        };
+    this.isCompatible = function () {
+      return !!_this.props.vkontakteId;
+    };
 
-        this.get = function (setState) {
-            var vkontakteId = _this.props.vkontakteId;
+    this.get = function (setState) {
+      var vkontakteId = _this.props.vkontakteId;
 
-            var size = _this.getImageSize();
-            var url = 'https://api.vk.com/method/users.get?user_id=' + vkontakteId + '&v=5.8&fields=' + size;
+      var size = _this.getImageSize();
+      var url = 'https://api.vk.com/method/users.get?user_id=' + vkontakteId + '&v=5.8&fields=' + size;
 
-            (0, _utils.fetchJSONP)(url, function (data) {
-                var src = data.response[0][size];
-                setState({
-                    src: src
-                });
-            }, function () {
-                // on error
-                setState(null);
-            });
-        };
-
-        this.props = props;
-    }
-
-    _createClass(GoogleSource, [{
-        key: 'getImageSize',
-        value: function getImageSize() {
-            var size = this.props.size;
-
-
-            if (size <= 50) return 'photo_50';
-
-            if (size <= 100) return 'photo_100';
-
-            if (size <= 200) return 'photo_200';
-
-            return 'photo_max';
+      (0, _utils.fetchJSONP)(url, function (data) {
+        // api returns OK code but an error
+        if (data.error) {
+          setState(null);
+          return;
         }
-    }]);
+        var src = data.response[0][size];
+        setState({
+          src: src
+        });
+      }, function () {
+        // on error
+        setState(null);
+      });
+    };
 
-    return GoogleSource;
+    this.props = props;
+  }
+
+  _createClass(GoogleSource, [{
+    key: 'getImageSize',
+    value: function getImageSize() {
+      var size = this.props.size;
+
+
+      if (size <= 50) return 'photo_50';
+
+      if (size <= 100) return 'photo_100';
+
+      if (size <= 200) return 'photo_200';
+
+      return 'photo_max';
+    }
+  }]);
+
+  return GoogleSource;
 }();
 
 exports.default = GoogleSource;
@@ -1055,7 +1159,7 @@ module.exports = exports['default'];
 'use strict';
 
 Object.defineProperty(exports, "__esModule", {
-    value: true
+  value: true
 });
 exports.fetch = fetch;
 exports.fetchJSONP = fetchJSONP;
@@ -1066,105 +1170,104 @@ exports.hasSourceFailedBefore = hasSourceFailedBefore;
 function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } else { return Array.from(arr); } }
 
 function fetch(url, successCb, errorCb) {
-    var request = new XMLHttpRequest();
-    request.onreadystatechange = function () {
-        if (request.readyState === 4) {
-            if (request.status === 200) {
-                var data = JSON.parse(request.responseText);
-                successCb(data);
-            } else {
-                errorCb(request.status);
-            }
-        }
-    };
-    request.open('GET', url, true);
-    request.send();
+  var request = new XMLHttpRequest();
+  request.onreadystatechange = function () {
+    if (request.readyState === 4) {
+      if (request.status === 200) {
+        var data = JSON.parse(request.responseText);
+        successCb(data);
+      } else {
+        errorCb(request.status);
+      }
+    }
+  };
+  request.open('GET', url, true);
+  request.send();
 }
 
 function fetchJSONP(url, successCb, errorCb) {
-    var callbackName = 'jsonp_cb_' + Math.round(100000 * Math.random());
+  var callbackName = 'jsonp_cb_' + Math.round(100000 * Math.random());
 
-    var script = document.createElement('script');
-    script.src = url + (url.indexOf('?') >= 0 ? '&' : '?') + 'callback=' + callbackName;
-    document.body.appendChild(script);
+  var script = document.createElement('script');
+  script.src = url + (url.indexOf('?') >= 0 ? '&' : '?') + 'callback=' + callbackName;
+  document.body.appendChild(script);
 
-    script.onerror = function () {
-        errorCb();
-    };
+  script.onerror = function () {
+    errorCb();
+  };
 
-    window[callbackName] = function (data) {
-        delete window[callbackName];
-        document.body.removeChild(script);
-        successCb(data);
-    };
+  window[callbackName] = function (data) {
+    delete window[callbackName];
+    document.body.removeChild(script);
+    successCb(data);
+  };
 }
 
 var defaultColors = ['#d73d32', '#7e3794', '#4285f4', '#67ae3f', '#d61a7f', '#ff4080'];
 
 function _stringAsciiCodeSum(value) {
-    return [].concat(_toConsumableArray(value)).map(function (letter) {
-        return letter.charCodeAt(0);
-    }).reduce(function (current, previous) {
-        return previous + current;
-    });
+  return [].concat(_toConsumableArray(value)).map(function (letter) {
+    return letter.charCodeAt(0);
+  }).reduce(function (current, previous) {
+    return previous + current;
+  });
 }
 
 function getRandomColor(value) {
-    var colors = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : defaultColors;
+  var colors = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : defaultColors;
 
-    // if no value is passed, always return transparent color otherwise
-    // a rerender would show a new color which would will
-    // give strange effects when an interface is loading
-    // and gets rerendered a few consequent times
-    if (!value) return 'transparent';
+  // if no value is passed, always return transparent color otherwise
+  // a rerender would show a new color which would will
+  // give strange effects when an interface is loading
+  // and gets rerendered a few consequent times
+  if (!value) return 'transparent';
 
-    // value based random color index
-    // the reason we don't just use a random number is to make sure that
-    // a certain value will always get the same color assigned given
-    // a fixed set of colors
-    var sum = _stringAsciiCodeSum(value);
-    var colorIndex = sum % colors.length;
-    return colors[colorIndex];
+  // value based random color index
+  // the reason we don't just use a random number is to make sure that
+  // a certain value will always get the same color assigned given
+  // a fixed set of colors
+  var sum = _stringAsciiCodeSum(value);
+  var colorIndex = sum % colors.length;
+  return colors[colorIndex];
 }
 
 function isLocalStorageAvailable() {
-    try {
-        return 'localStorage' in window && window['localStorage'];
-    } catch (err) {
-        return false;
-    }
+  try {
+    return 'localStorage' in window && window['localStorage'];
+  } catch (err) {
+    return false;
+  }
 }
 var _hasLocalStorage = isLocalStorageAvailable();
 
 var CACHE_KEY = 'react-avatar';
-
 function cacheFailingSource(source) {
-    // cache not available
-    if (!_hasLocalStorage) return;
+  // cache not available
+  if (!_hasLocalStorage || !source) return;
 
-    var cache = localStorage.getItem(CACHE_KEY) || '';
+  var cache = localStorage.getItem(CACHE_KEY) || '';
 
-    // already in cache
-    if (cache.indexOf(source) > -1) return;
+  // already in cache
+  if (cache.indexOf(source) > -1) return;
 
-    var cacheList = cache.split(';');
-    cacheList.push(source);
+  var cacheList = cache.split(';');
+  cacheList.push(source);
 
-    // only keep the last 20 results so we don't fill up local storage
-    cacheList = cacheList.slice(-20);
+  // only keep the last 20 results so we don't fill up local storage
+  cacheList = cacheList.slice(-20);
 
-    try {
-        localStorage.setItem(CACHE_KEY, cacheList.join(';'));
-    } catch (e) {
-        // failsafe for mobile Safari private mode
-        console.error(e);
-    }
+  try {
+    localStorage.setItem(CACHE_KEY, cacheList.join(';'));
+  } catch (e) {
+    // failsafe for mobile Safari private mode
+    console.error(e);
+  }
 }
 
 function hasSourceFailedBefore(source) {
-    if (!_hasLocalStorage) return;
-    var cache = localStorage.getItem(CACHE_KEY) || '';
-    return cache.indexOf(source) > -1;
+  if (!_hasLocalStorage || !source) return false;
+  var cache = localStorage.getItem(CACHE_KEY) || '';
+  return cache.indexOf(source) > -1;
 }
 },{}],13:[function(require,module,exports){
 var charenc = {

@@ -1,5 +1,3 @@
-'use strict';
-
 import React, { PureComponent } from 'react';
 import PropTypes from 'prop-types';
 import { cacheFailingSource, hasSourceFailedBefore } from './utils.js';
@@ -141,23 +139,23 @@ export default class Avatar extends PureComponent {
   }
 
   tryNextsource = (Source, next) => {
-
     const instance = new Source(this.props);
 
     if (!instance.isCompatible(this.props))
       return next();
 
     instance.get((state) => {
-      const failedBefore = state &&
-        state.hasOwnProperty('src') &&
-        hasSourceFailedBefore(state.src);
+      this.setState(() => (
+        state && !hasSourceFailedBefore(state.src) ? state : {}
+      ), () => {
+        const failedBefore = !!state &&
+          state.hasOwnProperty('src') &&
+          hasSourceFailedBefore((state || {}).src);
 
-      if (!failedBefore && state) {
-        // console.log(state);
-        this.setState(state);
-      } else {
-        next();
-      }
+        if (failedBefore || !state) {
+          next();
+        }
+      });
     });
   };
 
@@ -168,7 +166,8 @@ export default class Avatar extends PureComponent {
     // other social ID available to try
     if (event && event.type === 'error') {
       cacheFailingSource(this.state.src);
-      this.setState({ src: null });
+      this.setState(() => ({ src: null }));
+      return;
     }
 
     // console.log('## fetch');
@@ -181,13 +180,13 @@ export default class Avatar extends PureComponent {
 
       const source = SOURCES[this.state._internal.sourcePointer];
 
-      const internal = this.state._internal;
+      const internal = { ...this.state._internal };
       internal.sourcePointer++;
 
-      // console.log('## try fetch', id, this._fetchId, internal.sourcePointer-1);
-      this.setState({
+      // console.log('## try fetch', id, this._fetchId, internal.sourcePointer - 1);
+      this.setState(() => ({
         _internal: internal
-      }, () => {
+      }), () => {
         this.tryNextsource(source, () => {
           // console.log('-- next', id, this._fetchId);
           if (id === this._fetchId) {
@@ -198,7 +197,6 @@ export default class Avatar extends PureComponent {
     };
 
     tryFetch();
-
   };
 
   _renderAsImage() {
