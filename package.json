@@ -3,14 +3,12 @@
   "version": "2.5.1",
   "description": "Universal React avatar component makes it possible to generate avatars based on user information.",
   "main": "lib/index.js",
-  "engines": {
-    "node": "8.x.x"
-  },
   "scripts": {
+    "dev": "nodemon -x 'yarn start'",
+    "start": "yarn run clean && yarn run build && yarn run demo && yarn run serve",
     "clean": "rm -rf ./lib/*",
     "build": "babel ./src --out-dir ./lib",
     "demo": "browserify ./lib/demo.js -o ./build/demo.js --transform browserify-global-shim --standalone ReactAvatarDemo",
-    "dev": "yarn run clean && yarn run transpile && yarn run demo",
     "test": "eslint src/index.js",
     "serve": "python -m SimpleHTTPServer"
   },
@@ -68,6 +66,7 @@
     "browserify-global-shim": "^1.0.3",
     "eslint": "1.10.3",
     "eslint-plugin-react": "3.5.1",
+    "nodemon": "^1.17.4",
     "react": "^16.0.0",
     "react-dom": "^16.0.0",
     "watchify": "^3.7.0"
@@ -75,6 +74,15 @@
   "dependencies": {
     "babel-runtime": ">=5.0.0",
     "is-retina": "^1.0.3",
-    "md5": "^2.0.0"
+    "md5": "^2.0.0",
+    "react-lifecycles-compat": "^3.0.4"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "node_modules/*",
+      "lib/*",
+      "build/*"
+    ],
+    "ext": "js, json"
   }
 }

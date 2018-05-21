@@ -1,5 +1,3 @@
-'use strict';
-
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Avatar from './index.js';
@@ -37,14 +35,6 @@ export default class Demo extends React.Component {
         </section>
 
         <section>
-          <h2>Invalid gravatar</h2>
-          <Avatar email="bla" name="Jim Jones" size={80} />
-          <Avatar email="foo" name="Jamie Jones" size={80} />
-          <Avatar name="Jessica Jones" size={80} />
-          <Avatar name="Jeronimo Jones" size={80} />
-        </section>
-
-        <section>
           <h2>Google+</h2>
           <Avatar googleId="116933859726289749306" size={40} />
           <Avatar googleId="116933859726289749306" size={100} round={true} />
@@ -68,13 +58,13 @@ export default class Demo extends React.Component {
           <Avatar twitterHandle="sitebase" size={200} />
         </section>
 
-        <section>
+        {/* Vkontakte api requires authorization now <section>
           <h2>Vkontakte</h2>
           <Avatar vkontakteId="1" size={40} />
           <Avatar vkontakteId="1" size={100} round={true} />
           <Avatar vkontakteId="1" size={150} />
           <Avatar vkontakteId="1" size={200} />
-        </section>
+        </section> */}
 
         <section>
           <h2>Skype</h2>
@@ -82,6 +72,74 @@ export default class Demo extends React.Component {
           <Avatar skypeId="sitebase" size={100} round={true} />
           <Avatar skypeId="sitebase" size={150} />
           <Avatar skypeId="sitebase" size={200} />
+        </section>
+
+        <section>
+          <h2>Invalid Gravatar</h2>
+          <Avatar email="bla" name="Jim Jones" size={80} />
+          <Avatar email="foo" name="Jessica Jones" size={80} />
+          <Avatar name="Jessica Jones" size={80} />
+          <Avatar name="Jeronimo Jones" size={80} />
+
+          <h2>Invalid Google+</h2>
+          <Avatar
+            googleId="invalid"
+            name="Jim Jones"
+            size={80} />
+          <Avatar
+            googleId="invalid2"
+            name="Jessica Jones"
+            size={80} />
+
+          <h2>Invalid Facebook</h2>
+          <Avatar
+            facebookId="invalid"
+            name="Jim Jones"
+            size={80} />
+          <Avatar
+            facebookId="invalid"
+            name="Jessica Jones"
+            size={80} />
+
+          <h2>Invalid Twitter</h2>
+          <Avatar
+            twitterHandle="invalid"
+            name="Jim Jones"
+            size={80} />
+          <Avatar
+            twitterHandle="invalid"
+            name="Jessica Jones"
+            size={80} />
+
+          <h2>Invalid Skype</h2>
+          <Avatar
+            skypeId="invalid"
+            name="Jim Jones"
+            size={80} />
+          <Avatar
+            skypeId="invalid"
+            name="Jessica Jones"
+            size={80} />
+
+          <h2>Invalid Vkontakte</h2>
+          <Avatar
+            vkontakteId="1"
+            name="Jim Jones"
+            size={80} />
+          <Avatar
+            vkontakteId="1"
+            name="Jessica Jones"
+            size={80} />
+
+          <h2>Invalid Source</h2>
+          <Avatar
+            src="invalidSource"
+            name="Jim Jones"
+            size={80} />
+          <Avatar
+            src="invalidSource2"
+            name="Jessica Jones"
+            size={80} />
         </section>
 
         <section>
@@ -173,15 +231,15 @@ export default class Demo extends React.Component {
         </section>
         <section>
           <h2>Vertical Alignment</h2>
-          <Avatar name="Wim Mostmans" size={50} />
+          <Avatar valign="middle" name="Wim Mostmans" size={50} />
           Wim Mostmans
-        <Avatar name="Wim Mostmans" size={50} round={true} />
-          Wim Mostmans
-        <Avatar md5Email="8c5d4c4b9ef6c68c4ff91c319d4c56be" size={50} round={true} />
-          Wim Mostmans
-        <Avatar md5Email="8c5d4c4b9ef6c68c4ff91c319d4c56be" size={150} />
-          Wim Mostmans
-      </section>
+          <Avatar valign="middle" name="Wim Mostmans" size={50} round={true} />
+            Wim Mostmans
+          <Avatar valign="middle" md5Email="8c5d4c4b9ef6c68c4ff91c319d4c56be" size={50} round={true} />
+            Wim Mostmans
+          <Avatar valign="middle" md5Email="8c5d4c4b9ef6c68c4ff91c319d4c56be" size={150} />
+            Wim Mostmans
+        </section>
       </div>
     );
   }

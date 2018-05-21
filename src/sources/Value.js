@@ -45,6 +45,7 @@ export default class ValueSource {
       value: value,
       color: this.getColor()
     } : null;
+
     setState(state);
   }
 }

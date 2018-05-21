@@ -77,7 +77,7 @@ const _hasLocalStorage = isLocalStorageAvailable();
 const CACHE_KEY = 'react-avatar';
 export function cacheFailingSource(source) {
   // cache not available
-  if (!_hasLocalStorage)
+  if (!_hasLocalStorage || !source)
     return;
 
   const cache = localStorage.getItem(CACHE_KEY) || '';
@@ -101,8 +101,8 @@ export function cacheFailingSource(source) {
 }
 
 export function hasSourceFailedBefore(source) {
-  if (!_hasLocalStorage)
-    return;
+  if (!_hasLocalStorage || !source)
+    return false;
   const cache = localStorage.getItem(CACHE_KEY) || '';
   return cache.indexOf(source) > -1;
 }
