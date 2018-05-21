@@ -8,6 +8,7 @@
     "start": "yarn run clean && yarn run build && yarn run demo && yarn run serve",
     "clean": "rm -rf ./lib/*",
     "build": "babel ./src --out-dir ./lib",
+    "build:prod": "NODE_ENV=production babel ./src --out-dir ./lib",
     "demo": "browserify ./lib/demo.js -o ./build/demo.js --transform browserify-global-shim --standalone ReactAvatarDemo",
     "test": "eslint src/index.js",
     "serve": "python -m SimpleHTTPServer"
