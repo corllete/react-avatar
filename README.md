@@ -89,6 +89,7 @@ Some examples:
 | `borderRadius`  | *string*            | 100%   | The value of border radius, default is circle                                                                               |
 | `src`         | *string*          |         | Fallback image to use                                                                                  |
 | `style`         | *object*          |         | Style that will be applied on the root element                                                       |
+| `fontFamily`   | *string*          |  Helvetica, Arial, sans-serif | The font that will be used on text rendering                                                       |
 | `unstyled`    | *bool*            | false   | Disable all styles                                                                                     |
 | `onClick`    | *function*            |        | Mouse click event                                                                                     |
 

@@ -47,6 +47,7 @@ export default class Avatar extends PureComponent {
         round: PropTypes.bool,
         borderRadius: PropTypes.string,
         style: PropTypes.object,
+        fontFamily: PropTypes.string,
         size: PropTypes.number,
         unit: PropTypes.string,
         textSizeRatio: PropTypes.number,
@@ -73,6 +74,7 @@ export default class Avatar extends PureComponent {
         size: 100,
         unit: 'px',
         style: null,
+        fontFamily: 'Helvetica, Arial, sans-serif',
         textSizeRatio: 3,
         unstyled: false
     }
@@ -223,13 +225,16 @@ export default class Avatar extends PureComponent {
         const size = this.props.size;
         const unit = this.props.unit;
         const textSizeRatio = this.props.textSizeRatio;
+        const fontFamily = this.props.fontFamily;
         const round = this.props.round;
         const borderRadius = this.props.borderRadius;
         const initialsStyle = this.props.unstyled ? null : {
             width: size + unit,
             height: size + unit,
-            font: (Math.floor((size * 10) / textSizeRatio) / 10) + unit + ' Helvetica, Arial, sans-serif',
+            font: (Math.floor((size * 10) / textSizeRatio) / 10) + unit + ' ' + fontFamily,
             lineHeight: size + unit,
+            fontSize: Math.floor(size / textSizeRatio) + unit,
+            fontFamily,
             textAlign: 'center',
             textTransform: 'uppercase',
             color: this.props.fgColor,
