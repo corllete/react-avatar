@@ -45,6 +45,7 @@ export default class Avatar extends PureComponent {
         vkontakteId: PropTypes.string,
         skypeId: PropTypes.string,
         round: PropTypes.bool,
+        borderRadius: PropTypes.string,
         style: PropTypes.object,
         size: PropTypes.number,
         unit: PropTypes.string,
@@ -68,6 +69,7 @@ export default class Avatar extends PureComponent {
         vkontakteId: null,
         skypeId: null,
         round: false,
+        borderRadius: '100%',
         size: 100,
         unit: 'px',
         style: null,
@@ -199,12 +201,13 @@ export default class Avatar extends PureComponent {
         const size = this.props.size;
         const unit = this.props.unit;
         const round = this.props.round;
+        const borderRadius = this.props.borderRadius;
         const alt = this.props.name || this.props.value;
         const imageStyle = this.props.unstyled ? null : {
             maxWidth: '100%',
             width: size + unit,
             height: size + unit,
-            borderRadius: (round ? 500 : 0)
+            borderRadius: (round ? borderRadius : 0)
         };
         return (
           <img width={size + unit}
@@ -221,6 +224,7 @@ export default class Avatar extends PureComponent {
         const unit = this.props.unit;
         const textSizeRatio = this.props.textSizeRatio;
         const round = this.props.round;
+        const borderRadius = this.props.borderRadius;
         const initialsStyle = this.props.unstyled ? null : {
             width: size + unit,
             height: size + unit,
@@ -230,7 +234,7 @@ export default class Avatar extends PureComponent {
             textTransform: 'uppercase',
             color: this.props.fgColor,
             background: this.state.color,
-            borderRadius: (round ? '100%' : 0)
+            borderRadius: (round ? borderRadius : 0)
         };
         return (
             <div style={initialsStyle}>
@@ -246,7 +250,7 @@ export default class Avatar extends PureComponent {
             display: 'inline-block',
             width: size + unit,
             height: size + unit,
-            borderRadius: (this.props.round ? 500 : 0),
+            borderRadius: (this.props.round ? this.props.borderRadius : 0),
             ...this.props.style
         };
         return (
