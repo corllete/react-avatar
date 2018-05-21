@@ -1,20 +1,16 @@
-'use strict';
+export default class SkypeSource {
+  props = null;
 
-export default
-class SkypeSource {
+  constructor(props) {
+    this.props = props;
+  }
 
-    props = null;
+  isCompatible = () => !!this.props.skypeId
 
-    constructor(props) {
-        this.props = props;
-    }
+  get = (setState) => {
+    const { skypeId } = this.props;
+    const url = `https://api.skype.com/users/${skypeId}/profile/avatar`;
 
-    isCompatible = () => !!this.props.skypeId
-
-    get = (setState) => {
-        const { skypeId } = this.props;
-        const url = `https://api.skype.com/users/${skypeId}/profile/avatar`;
-
-        setState({src: url});
-    }
+    setState({ src: url });
+  }
 }

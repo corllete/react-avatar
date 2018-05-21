@@ -1,23 +1,19 @@
-'use strict';
+import { getRandomColor } from '../utils';
 
-import {getRandomColor} from '../utils';
+export default class IconSource {
+  props = null
+  icon = '✷'
 
-export default
-class IconSource {
+  constructor(props) {
+    this.props = props;
+  }
 
-    props = null
-    icon = '✷'
+  isCompatible = () => true
 
-    constructor(props) {
-        this.props = props;
-    }
-
-    isCompatible = () => true
-
-    get = (setState) => {
-        setState({
-            value: this.icon,
-            color: getRandomColor(this.icon, this.props.colors)
-        });
-    }
+  get = (setState) => {
+    setState({
+      value: this.icon,
+      color: getRandomColor(this.icon, this.props.colors)
+    });
+  }
 }

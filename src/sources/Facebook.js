@@ -1,21 +1,17 @@
-'use strict';
+export default class FacebookSource {
+  props = null;
 
-export default
-class FacebookSource {
+  constructor(props) {
+    this.props = props;
+  }
 
-    props = null;
+  isCompatible = () => !!this.props.facebookId
 
-    constructor(props) {
-        this.props = props;
-    }
+  get = (setState) => {
+    const { size, facebookId } = this.props;
+    const url = 'https://graph.facebook.com/' +
+      `${facebookId}/picture?width=${size}&height=${size}`;
 
-    isCompatible = () => !!this.props.facebookId
-
-    get = (setState) => {
-        const { size, facebookId } = this.props;
-        const url = 'https://graph.facebook.com/' +
-            `${facebookId}/picture?width=${size}&height=${size}`;
-
-        setState({src: url});
-    }
+    setState({ src: url });
+  }
 }

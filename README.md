@@ -90,6 +90,7 @@ Some examples:
 | `src`         | *string*          |         | Fallback image to use                                                                                  |
 | `style`         | *object*          |         | Style that will be applied on the root element                                                       |
 | `fontFamily`   | *string*          |  Helvetica, Arial, sans-serif | The font that will be used on text rendering                                                       |
+| `valign`   | *string*          |  baseline | The vertical align style value                                                      |
 | `unstyled`    | *bool*            | false   | Disable all styles                                                                                     |
 | `onClick`    | *function*            |        | Mouse click event                                                                                     |
 
