@@ -34,7 +34,7 @@ else
   update_version=$(npm version $update_type)
   echo "2. [publish] npm version -> $update_version"
 
-  publish=$(npm publish)
+  publish=$(npm publish --access public)
   echo "3. [publish] npm publish -> ${publish}"
 
   echo "4. [git] git push && git push --tags"
