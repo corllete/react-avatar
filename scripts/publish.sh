@@ -31,13 +31,16 @@ else
   echo "1. [build] yarn build:prod"
   yarn build:prod > /dev/null
 
+  echo "2. [git] git commit build changes"
+  git commit -am "Build for production" > /dev/null
+
   update_version=$(npm version $update_type)
-  echo "2. [publish] npm version -> $update_version"
+  echo "3. [publish] npm version -> $update_version"
 
   publish=$(npm publish --access public)
-  echo "3. [publish] npm publish -> ${publish}"
+  echo "4. [publish] npm publish -> ${publish}"
 
-  echo "4. [git] git push && git push --tags"
+  echo "5. [git] git push && git push --tags"
   git push > /dev/null
   git push --tags > /dev/null
 fi
