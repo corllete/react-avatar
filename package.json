@@ -1,6 +1,6 @@
 {
   "name": "@corllete/react-avatar",
-  "version": "2.5.3",
+  "version": "2.5.4",
   "description": "Universal React avatar component makes it possible to generate avatars based on user information.",
   "main": "lib/index.js",
   "scripts": {
